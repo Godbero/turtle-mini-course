@@ -1,4 +1,5 @@
 # Joy of Coding Assignment 1
+# by Robert Godbey
 # March 10, 2024
 
 print("Hello, World! My name is Rob")
@@ -17,22 +18,26 @@ def move(len):
   turtle.pendown()
 
 def triangle(size):
+  # Equalatial triangle has 120-degree turns
   for i in range(3):
     turtle.forward(size)
     turtle.right(120)
 
 def square(size):
+  # A rectangle (square) has 90-degree turns
   for i in range(4):
     turtle.forward(size)
     turtle.right(90)
 
 def polygon1(sides, length):
+  # To make a regular polygon divided 360 degrees by the number of sides
   angle = 360/sides
   for i in range(sides):
     turtle.forward(length)
     turtle.right(angle)
 
 def polygon2(sides, length, color):
+  # Add in the ability to set the color
   turtle.color(color)
   angle = 360/sides
   for i in range(sides):
@@ -57,6 +62,7 @@ def polygon4(sides, length, up, color="black"):
     return
   turtle.color(color)
   angle = 360/sides
+  # Add in the ability to draw up or down (think triangle point)
   for i in range(sides):
     turtle.forward(length)
     if up == 1:
